@@ -1,40 +1,9 @@
+import { arrayNameOfVoters } from "../common/untils/arrayNameOfVoters";
 import { NameOfVoters } from "../types/NameOfVoters";
 
 export default class VerifyNameOfVoter {
 
-    private namesPermition: NameOfVoters[] =
-        [
-            "hermeson",
-            "douglas",
-
-            "amanda",
-            "ana",
-            "israel",
-            "eliene",
-            "franklin",
-
-            "paula",
-            "joana",
-            "aurinete",
-
-            "diego",
-            "erika",
-            "monica",
-            "jessica",
-
-            "daline",
-            "daiana",
-            "brenda",
-
-            "camila",
-            "anne",
-
-            "dimitria",
-            "andreia",
-            "jaqueline",
-            "daisy",
-            "novata",
-        ]
+    private namesPermition: NameOfVoters[] = [...arrayNameOfVoters]
 
     public VerifyNameOfVoter(voter: NameOfVoters) {
 

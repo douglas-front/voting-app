@@ -1,0 +1,15 @@
+.hero{
+    display: flex;
+}
+
+.cards{
+    width: 78.073vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    padding: 2.708vw 2.083vw 1vw 2.083vw;
+}

@@ -1,0 +1,46 @@
+.side_bar{
+    position: relative;
+
+    width: 21.927vw;
+    height: 100dvh;
+    background-color: var(--color-dark-green);
+
+    padding-inline: 2.5vw;
+}
+
+.menu{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3.385vw;
+
+    padding-top: 7.187vw;
+}
+
+.menu li{
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.083vw;
+    font-weight: 900;
+}
+
+.button_clear{
+    cursor: pointer;
+    position: absolute;
+    bottom: 1.615vw;
+
+    background-color: #ff0000;
+
+    width: 9.792vw;
+    height: 2.76vw;
+
+    border: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.833vw;
+    letter-spacing: 0.1vw;
+}

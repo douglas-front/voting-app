@@ -6,7 +6,7 @@ export default class VerifyVoter{
 
     public VerifyVoter(voter: NameOfVoters){
 
-        const voterInLocalStorage: string | null = localStorage.getItem("users");
+        const voterInLocalStorage: string | null = localStorage.getItem("voters");
         
       this.voters = voterInLocalStorage ? JSON.parse(voterInLocalStorage as NameOfVoters) : this.voters = []
 

@@ -1,0 +1,27 @@
+.card{
+    position: relative;
+    background-color: var(--color-green);
+    width: 24.01vw;
+    height: 16.094vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+
+    color: #fff;
+}
+
+.winner{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    color: #fff;
+}
+
+.votes{
+    color: #fff;
+}

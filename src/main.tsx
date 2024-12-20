@@ -5,6 +5,7 @@ import App from './App.tsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import WorkSector from './pages/WorkSector/page.tsx'
 import Voting from './pages/Voting/page.tsx'
+import Adm from './pages/Adm/page.tsx'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/WorkSector',
     element: <WorkSector />
+  },
+  {
+    path: '/adm',
+    element: <Adm />
   },
   {
     path: '/Voting',

@@ -19,12 +19,12 @@ export default class InsertVoter {
 
         if (!verifyNewVoter && verifyNameOfNewVoter) {
 
-            const oldVoters = localStorage.getItem("users");
+            const oldVoters = localStorage.getItem("voters");
             this.voters = oldVoters ? [...JSON.parse(oldVoters), voter] : this.voters = [voter];
 
             console.log(this.voters);
 
-            localStorage.setItem("users", JSON.stringify(this.voters));
+            localStorage.setItem("voters", JSON.stringify(this.voters));
             this.setAccess(true)
 
             window.open("/worksector", "_self");
