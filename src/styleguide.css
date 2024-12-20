@@ -18,3 +18,8 @@ h2{
     text-transform: uppercase;
     font-size: 1.667vw;
 }
+h3{
+    font-size: 1.25vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}

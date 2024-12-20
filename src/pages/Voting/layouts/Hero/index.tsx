@@ -3,6 +3,7 @@ import Card from '../../components/Card';
 import styles from './styles.module.css';
 import stlesCard from '../../components/Card/styles.module.css'
 import gsap from 'gsap';
+import Modal from '../../../../common/components/Modal';
 
 export default function Hero() {
 

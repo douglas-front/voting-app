@@ -25,6 +25,7 @@ export default class InsertVoter {
             console.log(this.voters);
 
             localStorage.setItem("voters", JSON.stringify(this.voters));
+            localStorage.setItem("voter", voter)
             this.setAccess(true)
 
             window.open("/worksector", "_self");

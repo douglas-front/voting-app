@@ -1,0 +1,28 @@
+.modal{
+    position: fixed;
+    top: 4.583vw;
+    right: 1.719vw;
+
+    width: 21.302vw;
+    height: 5.208vw;
+    background-color: var(--color-dark-green);
+
+    z-index: 998;
+
+    padding-inline: 1.719vw;
+
+    display: grid;
+    place-items: center;
+
+    transform: translateX(120%);
+}
+
+.title{
+    text-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.906vw;
+
+    color: #fff;
+}

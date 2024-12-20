@@ -1,28 +1,44 @@
+
+import Modal from '../../../../common/components/Modal';
+import ModalService from '../../../../services/ModalService';
 import styles from './styles.module.css';
 
 export default function SideBar() {
 
-    function onView(view: string){
+    const modalService: ModalService = new ModalService();
+
+
+    function onView(view: string) {
         localStorage.setItem("onView", `${view}`)
         window.location.reload()
     }
 
-    function clearLocalStorage(){
+    function clearLocalStorage() {
+
         localStorage.clear()
-        window.alert("votação encerrada!")
-        window.open("/", "_self")
+
+        modalService.modalServiceOpen()
+
+        setInterval(() => {
+            window.open("/", "_self")
+        }, 1000);
     }
 
-    return(
-        <nav className={styles.side_bar}>
-            <menu className={styles.menu}>
-                <li onClick={()=> onView("participants")}>Participantes</li>
-                <li onClick={()=> onView("results")}>Resultado</li>
-                <li onClick={()=> onView("voters")}>Votantes</li>
-            </menu>
 
-            <button className={styles.button_clear} onClick={()=> clearLocalStorage()}>encerrar</button>
-        </nav>
+
+    return (
+        <>
+            <Modal text='votação encerrada' />
+            <nav className={styles.side_bar}>
+                <menu className={styles.menu}>
+                    <li onClick={() => onView("participants")}>Participantes</li>
+                    <li onClick={() => onView("results")}>Resultado</li>
+                    <li onClick={() => onView("voters")}>Votantes</li>
+                </menu>
+
+                <button className={styles.button_clear} onClick={() => clearLocalStorage()}>encerrar</button>
+            </nav>
+        </>
     )
 }
 

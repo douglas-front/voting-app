@@ -14,7 +14,9 @@ export default function Hero() {
     useEffect(() => {
         animation()
         localStorage.setItem("accessAccepted", JSON.stringify(false))
+        localStorage.setItem("onView", "participants")
         localStorage.removeItem("chosenEmployees")
+        localStorage.removeItem("voter")
     }, [])
 
     // localStorage.clear()
