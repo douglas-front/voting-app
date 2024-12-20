@@ -1,0 +1,21 @@
+.card{
+    cursor: pointer;
+    background-color: var(--color-green);
+    width: 24.01vw;
+    height: 16.094vw;
+
+    display: grid;
+    place-items: center;
+
+
+    transform: translateY(300%);
+}
+
+.card:hover{
+    background-color: var(--color-dark-green);
+}
+
+.title{
+
+    color: #fff;
+}

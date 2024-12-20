@@ -1,0 +1,22 @@
+.hero{
+    padding-inline: 1.458vw;
+    overflow: hidden;
+}
+
+.title{
+    overflow: hidden;
+    padding-top: 10.156vw;
+}
+.title span{
+    display: block;
+    transform: translateY(100%);
+}
+
+.cards{
+    
+    display: flex;
+    gap: 0.26vw;
+    flex-wrap: wrap;
+
+    width: 100vw;
+}

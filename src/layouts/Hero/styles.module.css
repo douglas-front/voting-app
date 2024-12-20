@@ -1,0 +1,86 @@
+.hero{
+    position: relative;
+    height: 100dvh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+
+.gal{
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 23.125vw;
+    height: 34.115vw;
+
+    z-index: 99;
+}
+
+.title{
+    overflow: hidden;
+    padding-top: 9.979vw;
+    text-align: center;
+}
+
+.spanText{
+    display: block;
+    transform: translateY(200%);
+}
+
+.input_name{
+    transform: translateY(100%);
+
+    background-color: #D9D9D9;
+    border: none;
+    outline: none;
+
+    width: 33.49vw;
+    height: 4.583vw;
+
+    border-radius: 0.208vw;
+
+    font-size: 1.667vw;
+    font-weight: 900;
+
+    padding-left: 0.99vw;
+}
+
+
+.form{
+    overflow: hidden;
+    display: flex;
+    width: 52.917vw;
+    position: absolute;
+    bottom: 3.75vw;
+    left: 50%;
+
+    transform: translate(-50%, -0%);
+}
+
+.btn_vote{
+    transform: translateY(100%);
+    cursor: pointer;
+    width: 19.427vw;
+    height: 4.583vw;
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 0.208vw;
+
+    color: #fff;
+    font-size: 1.667vw;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.229vw;
+}
+
+.marquee{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

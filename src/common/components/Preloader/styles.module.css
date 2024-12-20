@@ -1,0 +1,25 @@
+.preLoader{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100dvh;
+
+    z-index: 999;
+
+    display: flex;
+
+    animation: teste 1s ease-in-out;
+}
+
+.overlay_dark_green{
+    width: 0;
+    height: 100dvh;
+    background-color: var(--color-dark-green);
+}
+.overlay_light_green{
+    width: 0;
+    height: 100dvh;
+    background-color: var(--color-light-green);
+}
