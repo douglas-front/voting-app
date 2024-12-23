@@ -1,37 +1,38 @@
-import { useRef } from 'react';
-import InsertVote from '../../../../services/InsertVote';
+import { useEffect, useRef } from 'react';
 import { NameOfVoters } from '../../../../types/NameOfVoters';
-import Modal from '../../../../common/components/Modal';
+
 import styles from './styles.module.css';
 
-interface IProps{
+interface IProps {
     nameOfWorker: NameOfVoters
- 
+    fun: () => void
 }
 
-export default function Card({nameOfWorker}: IProps) {
-
+export default function Card({ nameOfWorker, fun }: IProps) {
 
     const articleRef = useRef<HTMLElement>(null)
-    
-    function insert(){
-        const insertVote = new InsertVote
+    const voter = localStorage.getItem("voter")
 
-        insertVote.insertVote(nameOfWorker)
+    function eventsNone(){
 
-        articleRef.current!.style.pointerEvents = "none"
+        if(voter === nameOfWorker){
+            articleRef!.current!.style.pointerEvents = "none"
+            return
+        }
 
-   
+        // console.log(voter)
+
     }
 
+    useEffect(()=>{
+        eventsNone()
+    },[])
 
-
-    return(
+    return (
         <>
-        <Modal text='voto concluido'/>
-        <article ref={articleRef} className={styles.card} onClick={()=> insert()}>
-            <h2 className={styles.title}>{nameOfWorker}</h2>
-        </article>
+            <article ref={articleRef} className={styles.card} onClick={() => fun()}>
+                <h2 className={styles.title}>{nameOfWorker}</h2>
+            </article>
         </>
     )
 }

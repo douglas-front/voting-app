@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Marquee from '../../components/marquee';
 import styles from './styles.module.css';
 import InsertVoter from '../../services/InsertVoter';
@@ -6,13 +6,16 @@ import { NameOfVoters } from '../../types/NameOfVoters';
 import VerifyNameOfVoter from '../../services/VerifyNameOfVoter';
 import VerifyVoter from '../../services/VerifyVoter';
 import animation from './animation';
+import Modal from '../../common/components/Modal';
 
 export default function Hero() {
 
     const inputRef = useRef<HTMLInputElement>(null)
+    const [inputValue, setInputValue] = useState<string>("")
 
     useEffect(() => {
         animation()
+        
         localStorage.setItem("accessAccepted", JSON.stringify(false))
         localStorage.setItem("onView", "participants")
         localStorage.removeItem("chosenEmployees")
@@ -22,15 +25,13 @@ export default function Hero() {
     // localStorage.clear()
 
     function insert() {
-        const verifyNameOfVoter = new VerifyNameOfVoter()
-        const verifyVoter = new VerifyVoter()
-        const insertVoter = new InsertVoter(verifyVoter, verifyNameOfVoter)
-
+        const insertVoter = new InsertVoter()
         insertVoter.InsertVoter(inputRef.current!.value.toLowerCase() as NameOfVoters);
     }
 
     return (
         <section className={styles.hero}>
+            <Modal text={`${inputValue} já votou!`}/>
             <h1 className={styles.title}>
                 <span className={styles.spanText}>
                     <span className='green'>“vote</span> para decidir o
@@ -47,7 +48,8 @@ export default function Hero() {
             </div>
 
             <form className={styles.form}>
-                <input ref={inputRef} placeholder='INFORME SEU NOME' className={styles.input_name} type="text" />
+                <input
+                onChange={(e)=> setInputValue(e.target.value)} ref={inputRef} placeholder='INFORME SEU NOME' className={styles.input_name} type="text" />
                 <button onClick={(e) => {
                     e.preventDefault();
                     insert();

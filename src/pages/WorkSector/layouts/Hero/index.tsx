@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Card from '../../components/Card';
 import styles from './styles.module.css';
-import stlesCard from '../../components/Card/styles.module.css'
-import gsap from 'gsap';
+import stylesCard from '../../components/Card/styles.module.css'
+
 import { workersTi } from '../../untils/arrays/arrayWorkerTI';
 import { workersSecretary } from '../../untils/arrays/arrayWorkerSecretary';
 import { workersPedagogic } from '../../untils/arrays/arrayWorkerPedagogic';
@@ -10,6 +10,7 @@ import { workersComercial } from '../../untils/arrays/arrayWorkerComercial';
 import { workersWellBeing } from '../../untils/arrays/arrayWorkerWellBeing';
 import { workersRelationShip } from '../../untils/arrays/arrayWorkerRelationShip';
 import { workersInternShip } from '../../untils/arrays/arrayWorkerInternShip';
+import cardAndTitle from '../../../../common/animations/cardAndTitle';
 
 export default function Hero() {
 
@@ -47,21 +48,8 @@ export default function Hero() {
 
     useEffect(() => {
 
-        gsap.to(`.${styles.title} span`, {
-            y: 0,
-            duration: 1,
-            ease: "power2.inOut",
-            delay: 0.6
-        })
-
-        gsap.to(`.${stlesCard.card}`, {
-            y: 0,
-            duration: 2,
-            delay: 0.3,
-            stagger: 0.2,
-            ease: "power2.inOut"
-        })
-
+        cardAndTitle({card: `${stylesCard.card}`, title: `${styles.title}`})
+        
     }, [])
 
     useEffect(()=>{        
@@ -76,8 +64,8 @@ export default function Hero() {
                 <span>ESCOLHA O SETOR DO FUNCIONÁRIO</span>
             </h2>
             <div className={styles.cards}>
-                {sectors.map((sector) => (
-                    <Card nameOfSector={sector.sector} workersOfSector={sector.workers} />
+                {sectors.map((sector, index) => (
+                    <Card key={`card work sector ${index}`} nameOfSector={sector.sector} workersOfSector={sector.workers} />
                 ))}
             </div>
         </section>

@@ -9,8 +9,6 @@ export default class VerifyNameOfVoter {
 
         if (this.namesPermition.includes(voter as NameOfVoters)) {
             return true
-        } else {
-            window.alert("você não é funcionário")
         }
 
     }

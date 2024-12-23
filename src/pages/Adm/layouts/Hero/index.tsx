@@ -31,8 +31,8 @@ export default function Hero() {
                     <Card nameOfWorker={participant} winner={false} votes={0}/>
                 )) : ""}
 
-                {onView === "voters" ? votersJson.map((participant: NameOfVoters) => (
-                    <Card nameOfWorker={participant} winner={false} votes={0}/>
+                {onView === "voters" ? votersJson.map((voter: NameOfVoters) => (
+                    <Card nameOfWorker={voter} winner={false} votes={0}/>
                 )) : ""}
 
                 {onView === "results" ? <Card nameOfWorker={winner.name} votes={winner.votes} winner/> : ""}

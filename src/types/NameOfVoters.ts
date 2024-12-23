@@ -27,5 +27,5 @@ export type NameOfVoters =
     "dimitria" |
     "andreia" |
     "jaqueline" |
-    "daisy" |
-    "novata" 
+    "deisy" |
+    "elianai" 

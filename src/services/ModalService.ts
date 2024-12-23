@@ -9,5 +9,12 @@ export default class ModalService{
             duration: 0.5,
             ease: "power2.inOut",
         })
+        gsap.to(`.${styles.modal}`,{
+            x: "120%",
+            duration: 0.5,
+            ease: "power2.inOut",
+            delay: 1
+        })
     }
+
 }

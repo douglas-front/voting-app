@@ -7,10 +7,9 @@ import VerifyVoter from "./VerifyVoter";
 
 export default class InsertVoter {
 
-
     private voters!: NameOfVoters[]
-
-    constructor(private verifyVoter: VerifyVoter, private verifyNameOfVoter: VerifyNameOfVoter) { }
+    private verifyVoter: VerifyVoter = new VerifyVoter();
+    private verifyNameOfVoter: VerifyNameOfVoter = new VerifyNameOfVoter()
 
     public InsertVoter(voter: NameOfVoters) {
 
@@ -22,14 +21,14 @@ export default class InsertVoter {
             const oldVoters = localStorage.getItem("voters");
             this.voters = oldVoters ? [...JSON.parse(oldVoters), voter] : this.voters = [voter];
 
-            console.log(this.voters);
+            // console.log(this.voters);
 
             localStorage.setItem("voters", JSON.stringify(this.voters));
             localStorage.setItem("voter", voter)
             this.setAccess(true)
 
             window.open("/worksector", "_self");
-
+            return
         }
         
     }
