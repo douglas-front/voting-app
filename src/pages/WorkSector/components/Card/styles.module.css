@@ -19,3 +19,17 @@
 
     color: #fff;
 }
+
+@media screen and (width <=750px) {
+    .card{
+        
+        width: 92.821vw;
+        height: 57.179vw;
+
+    }
+
+    .card .title{
+        font-size: 4.103vw  ;
+    }
+
+}

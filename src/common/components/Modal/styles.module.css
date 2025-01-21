@@ -17,6 +17,10 @@
     transform: translateX(120%);
 }
 
+.title svg{
+    width: 2.396vw;
+}
+
 .title{
     text-wrap: nowrap;
     display: flex;
@@ -25,4 +29,19 @@
     gap: 1.906vw;
 
     color: #fff;
+}   
+
+@media screen and (width <= 750px) {
+    .title{
+        font-size: 3.077vw;
+        gap: 10.906vw;
+    }
+    .modal{
+        width: 52.436vw;
+        height: 12.821vw;
+    }
+
+    .title svg{
+        width: 5.897vw;
+    }
 }

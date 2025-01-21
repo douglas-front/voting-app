@@ -20,3 +20,17 @@
 
     width: 100vw;
 }
+
+@media screen and (width <= 750px) {
+    .title{
+        padding-top: 21.282vw;
+        font-size: 8.205vw;
+        width: 58.974vw;
+    }
+
+    .cards{
+        flex-direction: column;
+        gap: 0.769vw;
+        padding: 5.128vw 0 5vw 0;
+    }
+}
