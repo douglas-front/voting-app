@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import Marquee from '../../components/marquee';
 import styles from './styles.module.css';
-import InsertVoter from '../../services/InsertVoter';
+import InsertVoter from '../../services/InsertVoter.service';
 import { NameOfVoters } from '../../types/NameOfVoters';
-import VerifyNameOfVoter from '../../services/VerifyNameOfVoter';
-import VerifyVoter from '../../services/VerifyVoter';
 import animation from './animation';
 import Modal from '../../common/components/Modal';
 

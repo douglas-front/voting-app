@@ -1,6 +1,6 @@
 
 import Modal from '../../../../common/components/Modal';
-import ModalService from '../../../../services/ModalService';
+import ModalService from '../../../../services/ModalService.service';
 import styles from './styles.module.css';
 
 export default function SideBar() {

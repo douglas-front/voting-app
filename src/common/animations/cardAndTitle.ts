@@ -7,9 +7,6 @@ interface IProps {
 
 export default function ({ title, card }: IProps) {
 
-    console.log(title)
-    console.log(card)
-
     gsap.to(`.${title} span`, {
         y: 0,
         duration: 1,

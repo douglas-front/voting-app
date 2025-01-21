@@ -1,6 +1,6 @@
 import { NameOfVoters } from "../types/NameOfVoters";
 import { VoteWorker } from "../types/VoteWorker";
-import ModalService from "./ModalService";
+import ModalService from "./ModalService.service";
 
 export default class InsertVote {
 

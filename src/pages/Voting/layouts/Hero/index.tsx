@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 import stylesCard from '../../components/Card/styles.module.css'
 
 import Modal from '../../../../common/components/Modal';
-import InsertVote from '../../../../services/InsertVote';
+import InsertVote from '../../../../services/InsertVote.service';
 import { NameOfVoters } from '../../../../types/NameOfVoters';
 import cardAndTitle from '../../../../common/animations/cardAndTitle';
 

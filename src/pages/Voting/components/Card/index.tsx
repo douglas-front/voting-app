@@ -20,8 +20,6 @@ export default function Card({ nameOfWorker, fun }: IProps) {
             return
         }
 
-        // console.log(voter)
-
     }
 
     useEffect(()=>{

@@ -3,7 +3,8 @@
 }
 
 .cards{
-    width: 78.073vw;
+    position: relative;
+    width: 100%;
     height: 100vh;
     overflow-y: scroll;
 
@@ -11,5 +12,11 @@
     flex-wrap: wrap;
     gap: 5px;
 
-    padding: 2.708vw 2.083vw 1vw 2.083vw;
+    padding: 2.708vw 0 1vw 2.083vw;
+}
+
+.cards h1{
+    position: absolute;
+    bottom: 0;
+    color: var(--color-dark-green);
 }

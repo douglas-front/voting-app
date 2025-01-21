@@ -1,5 +1,5 @@
 import { NameOfVoters } from "../types/NameOfVoters";
-import ModalService from "./ModalService";
+import ModalService from "./ModalService.service";
 
 export default class VerifyVoter{
 
@@ -11,8 +11,6 @@ export default class VerifyVoter{
         const voterInLocalStorage: string | null = localStorage.getItem("voters");
         
         this.voters = voterInLocalStorage ? JSON.parse(voterInLocalStorage as NameOfVoters) : this.voters = []
-
-        // console.log(this.voters)
 
         if(this.voters?.includes(voter as NameOfVoters)){
             this.modalService.modalServiceOpen()

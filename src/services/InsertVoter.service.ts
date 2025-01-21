@@ -1,7 +1,7 @@
 
 import { NameOfVoters } from "../types/NameOfVoters";
-import VerifyNameOfVoter from "./VerifyNameOfVoter";
-import VerifyVoter from "./VerifyVoter";
+import VerifyNameOfVoter from "./VerifyNameOfVoter.service";
+import VerifyVoter from "./VerifyVoter.service";
 
 
 
@@ -21,7 +21,6 @@ export default class InsertVoter {
             const oldVoters = localStorage.getItem("voters");
             this.voters = oldVoters ? [...JSON.parse(oldVoters), voter] : this.voters = [voter];
 
-            // console.log(this.voters);
 
             localStorage.setItem("voters", JSON.stringify(this.voters));
             localStorage.setItem("voter", voter)

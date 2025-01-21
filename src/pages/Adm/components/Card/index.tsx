@@ -1,4 +1,3 @@
-import InsertVote from '../../../../services/InsertVote';
 import { NameOfVoters } from '../../../../types/NameOfVoters';
 import styles from './styles.module.css';
 
