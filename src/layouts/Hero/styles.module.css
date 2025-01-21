@@ -78,9 +78,61 @@
     gap: 3.229vw;
 }
 
+.btn_vote svg{
+    width: 8.021vw;
+    /* height: 1.25vw; */
+}
+
 .marquee{
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media screen and (width <= 750px) {
+    .title{
+        font-size: 12.531vw;
+        padding-left: 3.846vw;
+        padding-top: 26.154vw;
+        text-align: left;
+    }
+
+    .marquee{
+        position: initial;
+        transform: translate(-1.5%, -0%);
+    }
+
+    .form{
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        gap: 3.077vw;
+        width: 100%;
+        padding-left: 3.846vw;
+        transform: translate(-0%, -0%);
+
+        padding-top: 42.051vw;
+    }
+
+    .input_name{
+        width: 82.436vw;
+        height: 11.282vw;
+        padding-left: 4vw;
+        font-size: 4.103vw;
+    }
+
+    .btn_vote{
+        width: 47.821vw;
+        height: 11.282vw;
+        font-size: 4.103vw;
+    }
+
+    .btn_vote svg{
+        width: 19.744vw;
+    }
+
+    .gal{
+        display: none;
+    }
 }

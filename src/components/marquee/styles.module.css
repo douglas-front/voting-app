@@ -35,3 +35,14 @@
         transform: translateX(-0%);
     }
 }
+
+@media screen and (width <=750px) {
+    .marquee{
+        width: 105.951vw;
+        height: 14.318vw;
+        gap: 4.718vw;
+    }
+    .marquee_content h2{
+        font-size: 4.103vw;
+    }
+}
