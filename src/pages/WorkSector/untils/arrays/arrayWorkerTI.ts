@@ -1,3 +1,3 @@
 import { NameOfVoters } from "../../../../types/NameOfVoters";
 
-export const workersTi: NameOfVoters[] = ["douglas", "hermeson"]
+export const workersTi: NameOfVoters[] = ["douglas", "hermeson", "higor"]

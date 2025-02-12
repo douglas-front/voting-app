@@ -1,6 +1,7 @@
 export type NameOfVoters =
     "douglas" |
     "hermeson" |
+    "higor" |
     
     "amanda" |
     "ana" |
@@ -16,6 +17,7 @@ export type NameOfVoters =
     "erika" |
     "monica" |
     "jessica" |
+    "ednely" |
     
     "daline" |
     "daiana" |
