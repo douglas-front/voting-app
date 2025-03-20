@@ -34,4 +34,7 @@ export const arrayNameOfVoters: NameOfVoters[] =
             "jaqueline",
             "deisy",
             "elianai",
+
+            "adriano",
+            "neuracy",
         ]

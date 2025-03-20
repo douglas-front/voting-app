@@ -30,4 +30,6 @@ export type NameOfVoters =
     "andreia" |
     "jaqueline" |
     "deisy" |
-    "elianai" 
+    "elianai" |
+    "adriano" |
+    "neuracy"

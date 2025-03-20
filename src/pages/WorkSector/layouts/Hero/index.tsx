@@ -11,6 +11,7 @@ import { workersWellBeing } from '../../untils/arrays/arrayWorkerWellBeing';
 import { workersRelationShip } from '../../untils/arrays/arrayWorkerRelationShip';
 import { workersInternShip } from '../../untils/arrays/arrayWorkerInternShip';
 import cardAndTitle from '../../../../common/animations/cardAndTitle';
+import { workersPortary } from '../../untils/arrays/arrayWorkerPortary';
 
 export default function Hero() {
 
@@ -43,6 +44,11 @@ export default function Hero() {
             sector: "COORD. ESTÁGIO",
             workers: [...workersInternShip]
         },
+        {
+            sector: "Portaria",
+            workers: [...workersPortary]
+        },
+        
     ]
     const isAccessAccepted = localStorage.getItem("accessAccepted")
 
